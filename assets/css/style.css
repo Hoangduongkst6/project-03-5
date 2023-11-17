@@ -212,3 +212,52 @@ body {
     bottom: -60px;
     right: 12px;
 }
+
+/* Logo section */
+.logo {
+    margin-top: 42.31px;
+    grid-template-columns: repeat(5, 1fr);
+}
+
+.logo__list {
+    display: grid;
+    height: 201px;
+    border-radius: 100.5px;
+    background: #E2EDDF;
+    grid-template-columns: repeat(5, 1fr);
+    align-items: center;
+    padding: 0 121px;
+}
+
+.logo__item {
+    color: #143C3C;
+    display: flex;
+    align-items: center;
+}
+
+.logo__item:nth-child(1) {
+    font-size: 31px;
+    font-weight: 500;
+    column-gap: 11px;
+}
+
+.logo__item:nth-child(2) {
+    font-size: 32px;
+    font-weight: 600;
+}
+
+.logo__item:nth-child(3) {
+    font-size: 26px;
+    column-gap: 11px;
+}
+
+.logo__item:nth-child(4) {
+    font-size: 23px;
+}
+
+.logo__item:nth-child(5) {
+    font-size: 19px;
+    font-weight: 600;
+    letter-spacing: 1.995px;
+}
+
