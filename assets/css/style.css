@@ -55,6 +55,7 @@ body {
 
 .navbar {
     margin-left: auto;
+    margin-right: 88px;
 }
 
 .navbar__list {
@@ -163,33 +164,50 @@ body {
     transform: translateY(77px);
 }
 
-.video-play__container:hover  .video-play__desc {
+.hero__video-play {
+    display: flex;
+    align-items: center;
+}
+
+.hero__video-play:hover  .video-play__desc {
     color: #83A17D;
 }
 
-.video-play__container:hover  .video-play__box {
+.hero__video-play:hover  .video-play__play {
     color: #143C3C;
 }
 
-.video-play__container:hover .video-play__border {
-    color: #83A17D;
+
+.hero__video-play:hover .video-play__border {
+    border-top-color: #83A17D;
+    border-left-color: #83A17D;
+    transform: rotate(135deg);
+}
+
+.video-play__border {
+    width: 57px;
+    height: 59px;
+    border: 4px solid #143C3C;
+    transition-duration: .3s;
+    border-radius: 50%;
+    border-bottom-color: transparent;
+    border-right-color: transparent;
+    transform: rotate(-45deg);
 }
 
 .video-play__desc {
     color: #152427;
-}
-
-.video-play__border {
-    color: #143C3C;
-    transition-duration: .3s;
-}
-
-.video-play__box {
-    color: #83A17D;
+    margin-left: 15px;
+    font-size: 1.8rem;
+    font-weight: 600;
+    line-height: 30px;
 }
 
 .video-play__play {
-    color: #fff;
+    margin-left: 2px;
+    margin-top: 5.5px;
+    transform: rotate(45deg);
+    color: #83A17D;
 }
 
 .hero__images {
@@ -216,7 +234,6 @@ body {
 /* Logo section */
 .logo {
     margin-top: 42.31px;
-    grid-template-columns: repeat(5, 1fr);
 }
 
 .logo__list {
@@ -233,31 +250,48 @@ body {
     color: #143C3C;
     display: flex;
     align-items: center;
+    justify-content: center;
 }
 
-.logo__item:nth-child(1) {
-    font-size: 31px;
+.logo__google {
+    font-size: 3.1rem;
     font-weight: 500;
-    column-gap: 11px;
 }
 
-.logo__item:nth-child(2) {
-    font-size: 32px;
+.logo__img-rectangle {
+    width: 40px;
+    height: 46px;
+}
+
+.logo__slack {
+    font-size: 3.2rem;
     font-weight: 600;
 }
 
-.logo__item:nth-child(3) {
-    font-size: 26px;
-    column-gap: 11px;
+.logo__img-discord {
+    width: 40px;
+    height: 31px;
+    margin-right: 11px;
 }
 
-.logo__item:nth-child(4) {
-    font-size: 23px;
+.logo__agworld {
+    font-size: 2.6rem;
 }
 
-.logo__item:nth-child(5) {
-    font-size: 19px;
+
+.logo__riotinto {
+    font-family: Sonsie One;
+    font-size: 2.3rem;
+}
+
+.logo__img-heroku {
+    width: 29px;
+    height: 30px;   
+    margin-right: 1px;
+}
+
+.logo__heroku {
+    font-size: 1.9rem;
     font-weight: 600;
     letter-spacing: 1.995px;
 }
-
