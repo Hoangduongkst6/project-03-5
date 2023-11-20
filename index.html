@@ -48,7 +48,7 @@
             <div class="menu ">
                 <!-- Logo -->
                 <a href="#">
-                    <img src="./assets/image/logo.svg" alt="menu_logo">
+                    <img class="menu__logo" src="./assets/image/logo.svg" alt="logo">
                 </a>
 
                 <!-- Navigation bar -->
@@ -77,15 +77,49 @@
                 <!-- Bars -->
                 <label for="checkbox__bars" class="bars">
                     <img class="bars__open" src="./assets/image/bars.svg" alt="Bars">
+
+                    <svg class="bars__close-mobile remove-tablet" xmlns="http://www.w3.org/2000/svg" width="18px"
+                        height="18.4px" viewBox="0 0 384 512">
+                        <style>
+                            svg {
+                                fill: #143C3C
+                            }
+                        </style>
+                        <path
+                            d="M342.6 150.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L192 210.7 86.6 105.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L146.7 256 41.4 361.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0L192 301.3 297.4 406.6c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L237.3 256 342.6 150.6z" />
+                    </svg>
                 </label>
+
+                <!-- Drawer Mobile -->
+                <div class="drawer-mobile remove-tablet">
+
+                    <!-- Navigation bar -->
+                    <nav class="navbar-mobile">
+                        <ul class="navbar__list">
+                            <li class="navbar__item">
+                                <a style="--delay: 1;" href="#" class="navbar__link">Home</a>
+                            </li>
+                            <li class="navbar__item">
+                                <a style="--delay: 2;" href="#about" class="navbar__link">About</a>
+                            </li>
+                            <li class="navbar__item">
+                                <a style="--delay: 3;" href="#contact" class="navbar__link">Contact</a>
+                            </li>
+                            <li class="navbar__item">
+                                <a style="--delay: 4;" href="#blog" class="navbar__link">blog</a>
+                            </li>
+                        </ul>
+                    </nav>
+                </div>
 
 
                 <label for="checkbox__bars" class="overlay"></label>
 
-                <!-- Drawer -->
-                <div class="drawer">
+                <!-- Drawer Tablet -->
+                <div class="drawer-tablet remove-mobile">
                     <label for="checkbox__bars" class="bars__box">
-                        <svg class="bars__close" xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 0 384 512">
+                        <svg class="bars__close-tablet" xmlns="http://www.w3.org/2000/svg" height="24px"
+                            viewBox="0 0 384 512">
                             <style>
                                 svg {
                                     fill: #143C3C
@@ -95,20 +129,21 @@
                                 d="M342.6 150.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L192 210.7 86.6 105.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L146.7 256 41.4 361.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0L192 301.3 297.4 406.6c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L237.3 256 342.6 150.6z" />
                         </svg>
                     </label>
+
                     <!-- Navigation bar -->
-                    <nav class="navbar-mobile-tablet">
+                    <nav class="navbar-tablet">
                         <ul class="navbar__list">
                             <li class="navbar__item">
-                                <a href="#" class="navbar__link">Home</a>
+                                <a style="--i: 1" href="#" class="navbar__link">Home</a>
                             </li>
                             <li class="navbar__item">
-                                <a href="#about" class="navbar__link">About</a>
+                                <a style="--i: 2" href="#about" class="navbar__link">About</a>
                             </li>
                             <li class="navbar__item">
-                                <a href="#contact" class="navbar__link">Contact</a>
+                                <a style="--i: 3" href="#contact" class="navbar__link">Contact</a>
                             </li>
                             <li class="navbar__item">
-                                <a href="#blog" class="navbar__link">blog</a>
+                                <a style="--i: 4" href="#blog" class="navbar__link">blog</a>
                             </li>
                         </ul>
                     </nav>
@@ -128,20 +163,23 @@
                         <p class="hero__desc">A brilliant, modular agency template for startup’s build yours toady.</p>
                         <div class="hero__box">
                             <a href="#!" class="btn">Get in touch</a>
-                            <div class="hero__video-play">
-                                <div class="video-play__border">
-                                    <div class="video-play__play">
-                                        <svg width="44" height="43" viewBox="0 0 44 43" fill="none"
-                                            xmlns="http://www.w3.org/2000/svg">
-                                            <ellipse cx="22" cy="21.5" rx="22" ry="21.5" fill="currentColor" />
-                                            <path
-                                                d="M26.4898 20.2259C27.1511 20.62 27.1377 21.5821 26.4658 21.9577L20.4968 25.2945C19.8249 25.6702 18.9983 25.1775 19.009 24.4078L19.1037 17.5701C19.1144 16.8004 19.9543 16.3309 20.6156 16.725L26.4898 20.2259Z"
-                                                fill="#fff" />
-                                        </svg>
-
-                                    </div>
+                            <div class="hero__play">
+                                <div class="play__box">
+                                    <svg class="play__border" width="29" height="60" viewBox="0 0 29 59" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <path
+                                            d="M28.5 59C21.1311 59 14.0487 56.0457 8.73883 50.757C3.42898 45.4684 0.304523 38.2565 0.02109 30.6347C-0.262343 23.0129 2.31728 15.5737 7.21865 9.87821C12.12 4.1827 18.9621 0.673611 26.3092 0.0872876L26.6111 4.14035C20.2764 4.64587 14.3772 7.67142 10.1512 12.5821C5.92525 17.4928 3.7011 23.9068 3.94547 30.4783C4.18985 37.0498 6.88376 43.2679 11.4619 47.8278C16.0401 52.3877 22.1466 54.9349 28.5 54.9349V59Z"
+                                            fill="#currentColor" />
+                                    </svg>
+                                    <svg class="play__circle" width="44" height="43" viewBox="0 0 44 43" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <ellipse cx="22" cy="21.5" rx="22" ry="21.5" fill="currentColor" />
+                                        <path
+                                            d="M26.4898 20.2259C27.1511 20.62 27.1377 21.5821 26.4658 21.9577L20.4968 25.2945C19.8249 25.6702 18.9983 25.1775 19.009 24.4078L19.1037 17.5701C19.1144 16.8004 19.9543 16.3309 20.6156 16.725L26.4898 20.2259Z"
+                                            fill="#fff" />
+                                    </svg>
                                 </div>
-                                <span class="video-play__desc">Watch Video</span>
+                                <span class="play__desc">Watch Video</span>
                             </div>
                         </div>
                     </section>
@@ -192,7 +230,7 @@
                     <div class="title">OUR SERVICES</div>
                     <div class="service__box">
                         <h2 class="heading service__heading">We offer a wide range of design service</h2>
-                        <div class="service__control">
+                        <div class="service__control remove-mobile">
                             <div class="control__box">
                                 <svg width="22" height="13" viewBox="0 0 22 13" fill="none"
                                     xmlns="http://www.w3.org/2000/svg">
@@ -216,6 +254,13 @@
                 </div>
 
                 <div class="service__list">
+                    <div class="control__box-mobile">
+                        <svg class="control__box-next next-left" xmlns="http://www.w3.org/2000/svg" height="1em"
+                            viewBox="0 0 320 512" fill="none">
+                            <path stroke="currentColor"
+                                d="M310.6 233.4c12.5 12.5 12.5 32.8 0 45.3l-192 192c-12.5 12.5-32.8 12.5-45.3 0s-12.5-32.8 0-45.3L242.7 256 73.4 86.6c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0l192 192z" />
+                        </svg>
+                    </div>
                     <article class="service__item">
                         <figure class="service__link">
                             <img class="service__img" src="./assets/image/services-1.png" alt="service">
@@ -228,7 +273,14 @@
                                 any website.</p>
                         </div>
                     </article>
-                    <article class="service__item">
+                    <div class="control__box-mobile">
+                        <svg class="control__box-next" xmlns="http://www.w3.org/2000/svg" height="1em"
+                            viewBox="0 0 320 512" fill="none">
+                            <path stroke="currentColor"
+                                d="M310.6 233.4c12.5 12.5 12.5 32.8 0 45.3l-192 192c-12.5 12.5-32.8 12.5-45.3 0s-12.5-32.8 0-45.3L242.7 256 73.4 86.6c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0l192 192z" />
+                        </svg>
+                    </div>
+                    <article class="service__item remove-mobile">
                         <a href="#!" class="service__link">
                             <img class="service__img" src="./assets/image/services-2.png" alt="service">
                         </a>
@@ -240,7 +292,7 @@
                                 any website.</p>
                         </div>
                     </article>
-                    <article class="service__item">
+                    <article class="service__item remove-mobile">
                         <a href="#!" class="service__link">
                             <img class="service__img" src="./assets/image/services-3.png" alt="service">
                         </a>
@@ -329,7 +381,7 @@
             <div class="container">
                 <section class="process__top">
                     <div class="title">OUR PROCESS</div>
-                    <h2 class="heading">A simple ,yet effective three step process</h2>
+                    <h2 class="process__top-heading heading">A simple ,yet effective three step process</h2>
                 </section>
                 <div class="process__list">
                     <article class="process__item">

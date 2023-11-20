@@ -17,6 +17,10 @@ body {
     align-items: center;
     color: #fff;
     cursor: pointer;
+    font-size: 1.8rem;
+    font-weight: 500;
+    line-height: 28px;
+    font-family: var(--font-Sans);
 }
 
 .btn:hover {
@@ -113,6 +117,11 @@ body {
     color: #575D5E;
     transition: .25s;
 }
+
+.navbar__link:hover {
+    color: #152427;
+}
+
 .action--item::before {
     content: "";
     display: inline-block;
@@ -124,12 +133,6 @@ body {
     bottom: -28px;
     left: 21px;
 }
-
-.navbar__link:hover {
-    color: var(--primary-color);
-    background-color: #dadada;
-}
-
 
 .bars {
     display: none;
@@ -148,6 +151,32 @@ body {
     position: absolute;
     bottom: -28px;
     left: 22px;
+}
+
+.drawer-tablet {
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    z-index: 1;
+    background: #fff;
+    width: 60%;
+    height: 100vh;
+    transform: translateX(100%);
+    opacity: 0;
+    transition: transform linear .3s;
+}
+
+.drawer-mobile {
+    position: fixed;
+    top: 60.4px;
+    right: 0;
+    left: 0;
+    background: #fff;
+    box-shadow: 0 2px 4px #ccc;
+    z-index: 1;
+    overflow: hidden;
+    height: 0;
+    transition: .3s;
 }
 
 /* Hero */
@@ -201,39 +230,36 @@ body {
     transform: translateY(77px);
 }
 
-.hero__video-play {
+.hero__play {
     display: flex;
     align-items: center;
     cursor: pointer; 
 }
 
-.hero__video-play:hover  .video-play__desc {
+.hero__play:hover  .play__desc {
     color: #83A17D;
 }
 
-.hero__video-play:hover  .video-play__play {
+.hero__play:hover  .play__circle {
     color: #143C3C;
 }
 
-
-.hero__video-play:hover .video-play__border {
-    border-top-color: #83A17D;
-    border-left-color: #83A17D;
-    transform: rotate(135deg);
+.hero__play:hover  .play__border{
+    fill: #83A17D;
 }
 
-.video-play__border {
+.hero__play:hover .play__box {
+    transform: rotate(180deg);
+}
+
+.play__box {
     width: 57px;
     height: 59px;
-    border: 4px solid #143C3C;
     transition-duration: .3s;
-    border-radius: 50%;
-    border-bottom-color: transparent;
-    border-right-color: transparent;
-    transform: rotate(-45deg);
+    position: relative;
 }
 
-.video-play__desc {
+.play__desc {
     color: var(--primary-color);
     margin-left: 15px;
     font-size: 1.8rem;
@@ -241,11 +267,11 @@ body {
     line-height: 30px;
 }
 
-.video-play__play {
-    margin-left: 2px;
-    margin-top: 5.5px;
-    transform: rotate(45deg);
+.play__circle {
     color: #83A17D;
+    position: absolute;
+    top: 8px;
+    left: 7px;
 }
 
 .hero__images {
@@ -258,13 +284,13 @@ body {
 .hero__icon-1 {
     position: absolute;
     top: -40px;
-    left: -185px;
+    left: -105px;
     z-index: 1;
 }
 
 .hero__icon-2 {
     position: absolute;
-    transform: rotate(180deg);
+    transform: rotate(175.95deg);
     bottom: -60px;
     right: 12px;
 }
@@ -370,6 +396,10 @@ body {
     justify-content: center;    
 }
 
+.control__box-mobile {
+    display: none;
+}
+
 .control__box:hover {
     cursor: pointer;
     color: #fff;
@@ -423,7 +453,6 @@ body {
     font-size: 2.2rem;
     font-weight: 600;
     line-height: 22px;
-    padding-top: 24px;
 }
 
 .service__body-desc {
@@ -593,7 +622,7 @@ body {
     color: #7D8188;
     font-weight: 500;
     line-height: 26px;
-    margin-top: 11px;
+    margin-top: 12px;
 }
 
 .about__right-box {
@@ -625,7 +654,7 @@ body {
     margin-top: 79px;
 }
 
-section.process__top {
+.process__top {
     width: 477px;
     row-gap: 20px;
 }
@@ -675,7 +704,7 @@ section.process__top {
     margin-right: 49px;
     margin-left: 30px;
 }
-.process__number:nth-child(1) {
+.process__number:nth-child(3) {
     margin-right: 47px;
     margin-left: 30px;
 }
@@ -793,16 +822,16 @@ section.process__top {
 
 .feature-img:nth-child(1) {
     top: 0;
-    right: -60px;
-    width: 72.033px;
-    height: 72px;
+    right: -55px;
+    width: 65.033px;
+    height: 60px;
     transform: rotate(176.985deg);
 }
 
 .feature-img:nth-child(2) {
     width: 410px;
-    top: -90px;
-    right: -60px;
+    top: -100px;
+    right: -40px;
 }
 
 .features__video{
@@ -948,7 +977,7 @@ section.process__top {
 }
 
 .blog__image {
-    width: 360px;
+    width: 100%;
     height: 317px;
     overflow: hidden;
     border-radius: 40px 40px 0 0;
