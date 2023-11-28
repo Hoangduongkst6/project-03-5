@@ -908,6 +908,7 @@ body {
     flex-direction: column;
     transition: .3s;
     cursor: pointer;
+    margin: 0 auto;
 }
 
 .contact__item:hover {
