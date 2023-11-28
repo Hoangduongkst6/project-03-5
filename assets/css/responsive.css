@@ -394,6 +394,12 @@
         width: 100%;
     }
 
+    .contact__item {
+        width: 326px;
+        height: 357px;    
+        margin: 0 auto;
+    }
+
     .control__box-mobile {
         width: 33px;
         height: 26px;
